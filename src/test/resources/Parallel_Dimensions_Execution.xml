@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parallel Execution with Dimensions" parallel="tests" thread-count="3">
+    <test name="Test with 1024x768">
+        <parameter name="width" value="1024" />
+        <parameter name="height" value="768" />
+        <classes>
+            <class name="com.picsart.automation.v1.regression.IntegrationTest" />
+        </classes>
+    </test>
+    <test name="Test with 1440x900">
+        <parameter name="width" value="1440" />
+        <parameter name="height" value="900" />
+        <classes>
+            <class name="com.picsart.automation.v1.regression.IntegrationTest" />
+        </classes>
+    </test>
+    <test name="Test with 1366x768">
+        <parameter name="width" value="1366" />
+        <parameter name="height" value="768" />
+        <classes>
+            <class name="com.picsart.automation.v1.regression.IntegrationTest" />
+        </classes>
+    </test>
+</suite>
